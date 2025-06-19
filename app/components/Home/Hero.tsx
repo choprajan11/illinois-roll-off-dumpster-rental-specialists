@@ -13,6 +13,7 @@ import ReviewWidget from "../Widgets/ReviewWidget";
 import Navbar from "../Navbar";
 import ContactInfo from "@/components/Content/ContactInfo.json";
 import Link from "next/link";
+import Types from "../Widgets/Types";
 
 const Hero = () => {
   const cityData: any = content;
@@ -27,8 +28,11 @@ const Hero = () => {
             h1={homeData.h1Banner}
             image={homeData.bannerImage}
             header={homeData.bannerQuote}
-            p1={`${homeData?.metaDescription?.split("[location]").join( ContactInfo.location)
-                        ?.split("[phone]").join(ContactInfo.No)}.`}
+            p1={`${homeData?.metaDescription
+              ?.split("[location]")
+              .join(ContactInfo.location)
+              ?.split("[phone]")
+              .join(ContactInfo.No)}.`}
           />
           {/* poster */}
           {/* Section 1 */}
@@ -59,10 +63,12 @@ const Hero = () => {
           {/* Section 1 */}
           {/* TYPES */}
           <Service />
+          <Types/>
           {/* TYPES*/}
           <Affordable />
           {/* Section 4 */}
           <WhyChoose data={homeData.whyChooseSection} />
+          <ProcessWidget />
           {/* Section 4 */}
           {/* Section 1 */}
           <div className="my-10 grid  grid-cols-1 gap-6 px-4 md:grid-cols-2 md:px-24">
@@ -90,12 +96,11 @@ const Hero = () => {
             </div>
           </div>
           {/* Section 1 */}
-          <ProcessWidget />
           {/* Area we Serve */}
           <div className="mx-auto mt-14 max-w-[95rem] md:mt-20">
-            <div className="mt-10 flex md:h-96 rounded-xl  bg-minor  shadow-2xl md:mb-10">
+            <div className="mt-10 flex rounded-xl bg-white  shadow-2xl  md:mb-10 md:h-96">
               <div className="md:w-[87%]">
-                <div className="mt-4 p-1 text-center text-2xl font-bold text-white">
+                <div className="mt-4 p-1 text-center text-2xl font-bold text-main">
                   We Proudly Serve{" "}
                   <span className="text-mai">The Following Areas</span>
                 </div>

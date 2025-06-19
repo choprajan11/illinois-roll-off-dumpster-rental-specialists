@@ -11,7 +11,7 @@ const Banner = ({
   h1,
 }: {
   image?: string;
-  header: string;
+  header?: string;
   p1: string;
   h1: string;
 }) => {
